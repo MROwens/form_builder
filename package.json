@@ -1,0 +1,19 @@
+{
+  "name": "form_builder",
+  "version": "1.0.0",
+  "description": "Dynamic form builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MROwens/form_builder.git"
+  },
+  "author": "mowens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MROwens/form_builder/issues"
+  },
+  "homepage": "https://github.com/MROwens/form_builder#readme"
+}
