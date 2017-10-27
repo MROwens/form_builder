@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/MROwens/form_builder/issues"
   },
-  "homepage": "https://github.com/MROwens/form_builder#readme"
+  "homepage": "https://github.com/MROwens/form_builder#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "mocha-eslint": "^4.1.0"
+  }
 }

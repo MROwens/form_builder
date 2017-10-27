@@ -1,18 +1,15 @@
 exports.formBuilder = (formElements) => {
-
-  //empty string to hold returned form
+  // empty string to hold returned form
   let formOutput = '';
 
-  //loop through object array
+  // loop through object array
   formElements.forEach((element) => {
-
-    //ensures element has type
-    if(element.type){
-
-      //switch statement to check input type
-      switch(element.type.toLowerCase()){
-        //check if form element contains class, id, etc.
-        //then append to formOutput string
+    // ensures element has type
+    if (element.type) {
+      // switch statement to check input type
+      switch (element.type.toLowerCase()) {
+        // check if form element contains class, id, etc.
+        // then append to formOutput string
         case 'password':
         case 'text':
           formOutput += `<input type="${element.type}" `;
@@ -27,7 +24,7 @@ exports.formBuilder = (formElements) => {
         case 'label':
           formOutput += '<label ';
           formOutput += element.id ? `id="${element.id}" ` : '';
-          formOutput += element.class ?  `class="${element.class} "` : '';
+          formOutput += element.class ? `class="${element.class} "` : '';
           formOutput += element.for ? `for="${element.for}" ` : '';
           formOutput += element.text ? `>${element.text}</label>` : '></label>';
 
@@ -37,14 +34,14 @@ exports.formBuilder = (formElements) => {
           formOutput += '<select ';
           formOutput += element.id ? `id="${element.id}" ` : '';
           formOutput += element.name ? `name="${element.name}" ` : '';
-          formOutput += element.class ?  `class="${element.class}"> ` : '';
-          //loop through element.option array if it exists
-          //add options to select element
-          if(element.option){
-            for(let i = 0; i < element.option.length; i++){
-              formOutput += `<option value="${element.option[i]}">${element.option[i]}</option>`
+          formOutput += element.class ? `class="${element.class}"> ` : '';
+          // loop through element.option array if it exists
+          // add options to select element
+          if (element.option) {
+            for (let i = 0; i < element.option.length; i += 1) {
+              formOutput += `<option value="${element.option[i]}">${element.option[i]}</option>`;
             }
-          }else{
+          } else {
             formOutput += '</select>';
           }
 
@@ -72,15 +69,13 @@ exports.formBuilder = (formElements) => {
           break;
 
         default:
-          //error shown if element.type doesn not match case
+          // error shown if element.type doesn not match case
           console.log(`Incorrect input type. Check object array input at ${element.type}.`);
       }
-
-    }else{
+    } else {
       console.log('Missing element type. Check object array input.');
     }
-
   });
-  //return formOutput
+  // return formOutput
   return `<form method="post">${formOutput}</form>`;
-}
+};
