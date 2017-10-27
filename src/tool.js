@@ -38,13 +38,15 @@ exports.formBuilder = (formElements) => {
           formOutput += element.id ? `id="${element.id}" ` : '';
           formOutput += element.name ? `name="${element.name}" ` : '';
           formOutput += element.class ?  `class="${element.class}"> ` : '';
-          //loop through element.option if it exists
+          //loop through element.option array if it exists
           //add options to select element
           if(element.option){
             for(let i = 0; i < element.option.length; i++){
               formOutput += `<option value="${element.option[i]}">${element.option[i]}</option>`
             }
-          }else{formOutput += '</select>';}
+          }else{
+            formOutput += '</select>';
+          }
 
           break;
 
