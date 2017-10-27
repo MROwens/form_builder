@@ -1,5 +1,4 @@
-# form_builder
-# Project Title
+# Form Builder
 
 Node.js Dynamic form builder
 
@@ -23,14 +22,14 @@ Install any dependancies:
 npm install
 ```
 
-###Test Output
+### Test Output
 From project root run:
 ```
 node src/test.js
 ```
 
 
-##Usage
+## Usage
 
 Pass the formBuilder method an array of objects
 ```
@@ -49,14 +48,3 @@ Output:
 ```
 <input type="text" id="someId" class="someClass"/><select id="someId"><option value='option1'>option1</option><option value="option2">option2</option></select>
 ```
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
