@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MROwens/form_builder/issues"
   },
-  "homepage": "https://github.com/MROwens/form_builder#readme"
+  "homepage": "https://github.com/MROwens/form_builder#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
